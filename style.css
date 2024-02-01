@@ -1,0 +1,675 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #176B87;
+    font-family: serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header{
+    width: 85%;
+    height: 95%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.menu_side,.music_side{
+    position: relative;
+    width: 25%;
+    height: 90%;
+    /* border: 1px solid white; */
+    background-color:#183D3D;
+    box-shadow: 5px 0px 3px #176B87;
+    color: white;
+}
+.music_side{
+    width: 75%;
+    background-color:#053B50;  
+}
+.master_player{
+width: 100%;
+height: 10%;
+background-color: #183D3D;
+box-shadow: 0px 3px 8px #183D3D;
+}
+header .menu_side h1{
+    font-size: 30px;
+    margin: 10px 20px;
+    font-weight: bold;
+    font-family:serif;
+}
+header .menu_side .playlist{
+    margin: 40px 0px 0px 20px;
+}
+header .menu_side .playlist h4{
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: #446f80;
+    cursor: pointer;
+    transition: .3s linear;
+    display: flex;
+    align-items: center;
+}
+header .menu_side .playlist h4:hover{
+    color: white;
+}
+header .menu_side .playlist h4 span{
+    position: relative;
+    margin-right: 30px;
+}
+header .menu_side .playlist h4 span::before{
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border: 2px solid  #446f80;
+    border-radius: 50%;
+    top: -4px;
+    transition: .3s linear;
+}
+header .menu_side .playlist h4:hover span::before{
+   border: 2px solid white;
+}
+header .menu_side .playlist h4 .bi{
+    display: none;
+}
+header .menu_side .playlist  .active{
+    color: #FF0060;
+}
+header .menu_side .playlist  .active span{
+    display: none;
+}
+header .menu_side .playlist .active .bi{
+    display: flex;
+    margin-right: 20px;
+}
+header .menu_side .menu_song{
+    width: 100%;
+    height: 300px;
+    /* border: 1px solid white; */
+    margin-top: 40px;
+}
+header .menu_side .menu_song li{
+   list-style: none;
+   padding: 5px 0px 5px 20px;
+   display: flex;
+   align-items: center;
+   position: relative;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: .3s linear;
+}
+header .menu_side .menu_song li:hover{
+  background-color:rgba(53, 162, 159,0.2);
+  /* background-color: red; */
+ }
+header .menu_side .menu_song li span{
+    font-size: 15px;
+    font-weight: 500;
+    color: #489393;
+ }
+ header .menu_side .menu_song li img{
+   width: 32px;
+   height: 32px;
+   margin-left: 20px;
+ }
+ header .menu_side .menu_song li h5{
+   font-size: 15px;
+   margin-left: 15px;
+   font-weight: bold;
+  }
+  header .menu_side .menu_song li .sub-title{
+    font-size: 15px;
+    margin-left: 15px;
+    color: #488f8f;
+   }
+   header .menu_side .menu_song li .bi{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+   }
+
+   header .master_player{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+   }
+   
+   header .master_player .wave{
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid white; */
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+   }
+   header .master_player .wave .wave1{
+   width: 5px;
+   height: 10px;
+   margin-right: 3px;
+   background-color:greenyellow;
+   /* animation: wave .5s linear  infinite ; */
+   animation: unset;
+   border-radius: 10px 10px 0px 0px;
+   }
+ header .master_player .wave .wave1:nth-child(2){
+    height: 13px;
+    /* animation-delay: .4s; */
+ }
+ header .master_player .wave .wave1:nth-child(3){
+        height: 8px;
+        /* animation-delay: .8s; */
+ }
+        /* javaScript class wave */
+ header .master_player .active2 .wave1{
+            animation: wave .5s linear  infinite ;
+  }       
+            header .master_player .active2 .wave1:nth-child(2){
+                animation-delay: .4s;
+                }
+                header .master_player .active2 .wave1:nth-child(3){
+                    animation-delay: .8s;
+                    }
+        @keyframes wave{
+            0%{
+                height: 10px;
+            }
+            50%{
+                height: 15px;
+            }
+            100%{
+                height: 20px;
+            }
+        }
+
+        header .master_player img{
+            width: 35px;
+            height: 35px;
+        }
+        header .master_player h5{
+            width: 130px;
+            font-size: 13px;
+            margin-left: 15px;
+            color: white;
+            line-height: 15px;
+
+        }
+        header .master_player h5 .sub-title{
+           font-size: 11px;
+           color: #679d9d;
+        }
+        header .master_player .icons{
+            font-size: 20px;
+            color:white;
+            margin: 0px 20px 0px 40px;
+            display: flex;
+            align-items: center;
+         }
+         header .master_player .icons .bi{
+           cursor: pointer;
+           outline: none;
+           
+         }
+         header .master_player .icons .bi:hover{
+        
+          background-color:rgba(53, 162, 159,0.2);
+          border: 1px solid white;
+          border-radius: 50%;
+        }
+         header .master_player .icons .shuffle {
+          font-size: 18px;
+          margin-right: 10px;
+          width: 18.5px; 
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          
+        }
+        header .master_player .icons #download_music{
+          font-size: 20px;
+          margin-left: 10px;
+         
+          
+        }
+
+         header .master_player .icons .bi:nth-child(3){
+          border:1px solid rgba(53, 162, 159,0.2);
+          border-radius: 50%;
+          padding: 1px 3px 0px 5px;
+          font-size:25px ;
+          margin: 0px 5px;
+          transition: .3s linear;
+         }
+     
+          header .master_player span{
+            color: white;
+            width: 32px;
+            font-size: 14px;
+            font-weight: 300;
+          }
+          
+          header .master_player #currentStart{
+           margin-left: 20px;
+          }
+
+          header .master_player .bar{
+            position: relative;
+            width: 50%;
+            height: 2px;
+            background: rgba(53, 162, 159,0.2);
+            margin: 5px 15px 0px 10px;
+           }
+           header .master_player .bar .bar2{
+            position: absolute;
+            background-color: cyan;
+            width: 0%;
+            height: 100%;
+            top: 0;
+            transition: 1s linear;
+           }
+
+           header .master_player .bar .dot{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: aqua;
+            left: 0%;
+            top: -3px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: 1s linear;
+           }
+
+           header .master_player .bar .dot::before{
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 1px solid cyan;
+            border-radius: 50%;
+            left: -8px;
+            top: -7px;
+            box-shadow: 0px 0px 5px cyan inset;
+           }
+           header .master_player .bar input{
+            position: absolute;
+            width: 100%;
+            top: -7px;
+            left: 0%;
+            cursor: pointer;
+            z-index: 1;
+            transition: 3s linear;
+            opacity: 0;
+           }
+           header .master_player  .vol{
+            position: relative;
+            width: 100px;
+            height: 2px;
+            margin-left: 50px;
+            background-color: rgba(53, 162, 159,0.2);
+           }
+           header .master_player  .vol .bi{
+            position: relative;
+           color: white;
+           font-size: 25px;
+           top: -17px;
+           left: -30px;
+           }
+           header .master_player .vol input{
+            position: absolute;
+            width: 100%;
+            top: -7px;
+            left: 0%;
+            cursor: pointer;
+            z-index: 1;
+            transition: 3s linear;
+            opacity: 0;
+           }
+           header .master_player .vol .vol_bar{
+            position: absolute;
+            background-color: cyan;
+            width: 0%;
+            height: 100%;
+            top: 0;
+            transition: 1s linear;
+           }
+
+           header .master_player .vol .vol_dot{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: aqua;
+            left: 0%;
+            top: -3px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: 1s linear;
+           }
+
+           header .master_player .vol .vol_dot::before{
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 1px solid cyan;
+            border-radius: 50%;
+            left: -8px;
+            top: -7px;
+            box-shadow: 0px 0px 5px cyan inset;
+           }
+
+          header .music_side{
+            z-index: 2;
+
+           }
+           
+          header .music_side::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 300px;
+          background: transparent;
+          background: url("https://www.bollywoodhungama.com/wp-content/uploads/2021/03/WhatsApp-Image-2021-03-12-at-1.06.08-PM.jpeg");
+          background-repeat: no-repeat;
+          background-position-x: center;
+          z-index: -1;
+         left: 30%;
+         top: 10%;
+           }
+           
+           header .music_side nav{
+            width: 90%;
+            height: 10%;
+            margin: auto;
+            /* border: 1px solid white; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+           }
+
+           header .music_side nav ul {
+            display: flex;
+           }
+           header .music_side nav ul li {
+           position: relative;
+           list-style-type: none;
+           font-size: 20px;
+           color: #176B87;
+           margin-right: 25px;
+           cursor: pointer;
+           transition: .3s linear;
+           }
+           header .music_side nav ul li:hover {
+           color: white;
+            }
+            header .music_side nav ul li:first-child{
+                color: white;
+                 }
+                 header .music_side nav ul li span {
+                    position: absolute;
+                    width: 100%;
+                    height: 2.5px;
+                    background-color: #1199c6;
+                    bottom: -5px;
+                    left: 0px;
+                    border-radius: 20px;
+                     }
+
+                     header .music_side nav .search {
+                       position: relative;
+                       width: 40%;
+                       padding: 1px 10px;
+                      
+                         }
+                        
+                     header .music_side nav .search::before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color:rgba(53, 162, 159,0.2);
+                       border-radius: 20px;
+                       backdrop-filter: blur(5px);
+                       z-index: -1;
+                          }
+                          header .music_side nav .search .bi{
+                            font-size: 13px;
+                            padding: 3px 0px 0px 10px;
+                          }
+                          header .music_side nav .search input{
+                            background:none;
+                            outline: none;
+                            border: none;
+                            padding: 0px 10px;
+                            color: white;
+                          }
+
+                          header .music_side nav .logo{
+                            position: relative;
+                            width: 30px;
+                            height: 30px;
+                          
+                            cursor: pointer;
+                          }
+                          header .music_side nav .logo img{
+                            position: relative;
+                            width: 35px;
+                            height: 35px;
+                           border-radius: 50%;
+                            box-shadow: 2px 2px 3px royalblue;
+                            
+                          }
+                          header .music_side .content{
+                            width: 90%;
+                            height: 30%;
+                            margin: auto;
+                            /* border: 1px solid white; */
+                            padding-top: 20px;
+                          }
+                          header .music_side .content h1{
+                            font-size: 30px;
+                            font-weight: bolder;
+                          }
+                          header .music_side .content p{
+                            width: 50%;
+                            font-size: 15px;
+                            font-weight: bolder;
+                            color: #505557;
+                            text-align: justify;
+                            margin: 5px;
+                          }
+                          header .music_side .content .buttons{
+                           margin-top: 15px;
+                          }
+                          header .music_side .content .buttons button{
+                            width: 130px;
+                            height: 40px;
+                            border: 2px solid cyan;
+                            outline: none;
+                            background-color: #446f80;
+                            border-radius: 10px;
+                            color: white;
+                            padding:px;
+                            font-size: 20px;
+                            transition: .3s linear;
+                           }
+                           header .music_side .content .buttons button:hover{
+                            background:none;
+                           }
+                           header .music_side .content .buttons button:last-child{
+                               background: none;
+                           }
+                           header .music_side .content .buttons button:last-child:hover{
+                            background-color: #446f80;
+                        }
+                       
+                        header .music_side .popular_song{
+                            width: 90%;
+                            height: auto;
+                            /* border: 1px solid white; */
+                            margin: auto;
+                            margin-top: 15px;
+                            
+                        }
+                        header .music_side .popular_song .h4{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            
+                        }
+                        header .music_side .popular_song .h4 .bi{
+                          color: gray;
+                          cursor: pointer;
+                          transition: .3s linear;
+                            
+                        }
+                        header .music_side .popular_song .h4 .bi:hover{
+                            color:white
+                          }
+                          header .music_side .popular_song .pop_song{
+                            width: 100%;
+                            height: 150px;
+                            margin-top: 15px;
+                            display: flex;
+                            overflow-x: auto;
+                            scroll-behavior: smooth;
+                          }
+                          header .music_side .popular_song .pop_song::-webkit-scrollbar{
+                           display: none;
+                          }
+
+                          header .music_side .popular_song .pop_song li{
+                           min-width: 100px;
+                           height: 140px;
+                           list-style: none;
+                           margin-right: 10px;
+                           transition: .3s linear;
+                          }
+                          header .music_side .popular_song .pop_song li:hover{
+                           background-color:rgba(53, 162, 159,0.2);
+                           }
+                        
+                           header .music_side .popular_song .pop_song li .img_play{
+                            position: relative;
+                            width: 100px;
+                            height: 100px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            }
+                            header .music_side .popular_song .pop_song li .img_play img{
+                               width: 100%;
+                               height: 100%;
+                                }
+
+                                header .music_side .popular_song .pop_song li .img_play .bi{
+                                   position: absolute;
+                                   font-size: 20px;
+                                   cursor: pointer;
+                                   transition: .3s linear;
+                                   opacity: 0;
+                                     }
+                                     header .music_side .popular_song .pop_song li .img_play:hover .bi{
+                                        opacity: 1;
+                                          }
+                                          header .music_side .popular_song .pop_song li h5{
+                                          padding: 5px 0px 0px 5px;
+                                          line-height: 15px;
+                                          font-size: 12px;
+                                              }
+                                              header .music_side .popular_song .pop_song li h5 .sub-title{
+                                                font-size: 10px;
+                                                color: gray;
+                                                    }
+
+                          header .music_side .popular_song{
+                            width: 90%;
+                            height: auto;
+                            /* border: 1px solid white; */
+                            margin: auto;
+                            margin-top: 15px;
+                            
+                        }
+                        header .music_side .popular_song .h4{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            
+                        }
+                        header .music_side .popular_song .h4 .bi{
+                          color: gray;
+                          cursor: pointer;
+                          transition: .3s linear;
+                            
+                        }
+                        header .music_side .popular_song .h4 .bi:hover{
+                            color:white
+                          }
+
+
+
+                          header .music_side .popular_artist{
+                            width: 90%;
+                            height: auto;
+                            /* border: 1px solid white; */
+                            margin: auto;
+                            margin-top: 15px;
+                            
+                        }
+                        header .music_side .popular_artist .h4{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            
+                        }
+                        header .music_side .popular_artist .h4 .bi{
+                          color: gray;
+                          cursor: pointer;
+                          transition: .3s linear;
+                            
+                        }
+                        header .music_side .popular_artist .h4 .bi:hover{
+                            color:white
+                          }
+                          header .music_side .popular_artist .item{
+                           width: 100%;
+                           height: auto;
+                           margin-top: 10px;
+                           display: flex;
+                           overflow-x: auto;
+                           scroll-behavior: smooth;
+                          }
+                          header .music_side .popular_artist .item::-webkit-scrollbar{
+                            display: none;
+                          }
+                          header .music_side .popular_artist .item li{
+                           list-style: none;
+                           position: relative;
+                           min-width: 60px;
+                           /* width: 60px; */
+                           height: 60px;
+                           background-color: white;
+                           border-radius: 50%;
+                           margin-right: 20px;
+                           cursor: pointer;
+                           }
+                           header .music_side .popular_artist .item li img{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            position: absolute;
+                            }
